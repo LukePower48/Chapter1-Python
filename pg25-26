@@ -1,0 +1,35 @@
+# # name = input("who is your favorite artist? ")
+# # print (name, ",what a great choice!")
+# 
+# numbers = input("please enter a five digit number representing a number of seconds ")
+# answer = (numbers/60)
+# # print (numbers, "is equal to",answer, "minutes")
+
+# first = input("please enter the 1st letter ")
+# second = input("please enter the 2nd letter ")
+# third = input("please enter the 3rd letter ")
+# fourth = input("please enter the 4th letter ")
+# fifth = input("please enter the 5th letter ")
+# print ("Here is your 5 letters in their ASCII decimal values!")
+# print (ord(first))
+# print (ord(second))
+# print (ord(third))
+# print (ord(fourth))
+# print (ord(fifth))
+
+# elec_cost = input("please enter your units of electricity used this month ->")
+# elec_cost = int(elec_cost)
+# per_unit = 0.19
+# per_unit = int(per_unit)
+# standing_charge = 26.20
+# total = ((elec_cost*per_unit)+ standing_charge)
+# print ("The total cost of electricity this month is... ", total)
+
+fish = input("how much fish would you like? ")
+Chips = input ("how much chips would you like? ")
+fish = int(fish)
+Chips = int(Chips)
+fish_cost =(fish*4.50)
+chips_cost =(Chips*2.80)
+total = (fish_cost+chips_cost)
+print ("Your total cost is...", total)
