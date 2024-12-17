@@ -1,0 +1,23 @@
+#q16a hl
+#Enter name:Luke Power
+# read weight
+#intro added for (v)
+def display_intro():
+    print ("Welcome to my BMI calculator!")
+display_intro()
+weight = int(input("Enter weight (in kilograms): "))
+#height changed to an input for (ii)
+height = int(input("Enter height (in centimeters): "))#centimetres
+#pow function used for (iv)
+bmi = (weight / pow(height,2)*10000)
+#round used for (iii)
+if bmi < 18.5:
+    print ("Underweight")
+elif bmi >= 18.5 and bmi <=24.9:
+    print ("Normal")
+elif bmi >= 25 and bmi <=29.9:
+    print ("Overweight")
+elif bmi <= 30:
+    print ("Obese")
+
+print("BMI is: ", round(bmi,1))
