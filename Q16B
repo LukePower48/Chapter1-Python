@@ -1,0 +1,26 @@
+#16b HL
+#Enter name:Luke Power
+
+from random import *
+
+heights = [] #an empty list of heights
+weights = [] #an empty list of weights
+bmi_values = []
+#Loop to build up the lists with random values
+amount = int(input("Enter the number of pairs of values you wish to generate: "))
+for count in range(amount):
+    # a random integer between 150 and 210
+    heights.append(randint(150, 210))
+    # a random integer between 50 and 130
+    weights.append(randint(50, 130))
+
+for i in range(amount):
+    height_m = heights[i] / 100 
+    weight_kg = weights[i] 
+    bmi = weight_kg / (height_m ** 2) 
+    bmi_values.append(bmi)
+    print ("BMI:",bmi)
+
+# Display the lists (i)
+print ("Heights:",heights)
+print ("Weights:",weights)
