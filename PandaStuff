@@ -1,0 +1,54 @@
+import pandas as pd
+from matplotlib import pyplot
+df = pd.read_csv("FIFA21-player-list.csv")
+# print(df)
+#print(df.to_string())
+#print(df.head())
+#print(df.head(10))
+#print(df.tail())
+# print(df.loc[100])
+#print(df.info())
+
+
+# import pandas as pd
+# 
+# # Read the entire CSV file into a pandas DataFrame
+# df = pd.read_csv('FIFA21-player-list.csv')
+# 
+# # Display the length of the dataframe
+# print("Nr. rows", len(df))
+# 
+# # Display the number of rows and column
+# print("Shape (rows, cols)", df.shape)
+
+
+# df1 = df[['short_name', 'age', 'value_eur' , 'league_name', 'nationality']] 
+# irishPlayers = df1[df1['nationality'] == 'Republic of Ireland']
+# print(irishPlayers)
+
+df1 = df[['short_name', 'age', 'value_eur' , 'league_name']] 
+# print(df1) # DataFrame 
+# premPlayersOver30 = df1[(df1['league_name'] == 'English Premier League') & (df1['age'] > 30)]
+# print(premPlayersOver30)
+
+# playersOver30 = df1.loc[(df1['age'] > 30), ['short_name', 'age']]
+# print(playersOver30)
+
+df1 = df[['short_name', 'age', 'nationality', 'club_name', 'league_name', 'value_eur', 'wage_eur']]
+
+# nationalityCounts = df1['nationality'].value_counts()
+# meanage = df1["value_eur"].mean()
+# print ("Output: ",meanage)
+
+df1 = df[['short_name', 'age', 'nationality', 'club_name', 'league_name', 'value_eur', 'wage_eur']]
+
+# Player wage grouped by age?
+print(df1.groupby('age')['wage_eur'].mean())
+from matplotlib import pyplot
+
+# Player wage grouped by age
+df = df1.groupby('age')['wage_eur'].mean()
+age_grade =[0,20,30,40,50,60]
+print(df,age_grade)
+pyplot.bar(df,age_grade)
+pyplot.show()
