@@ -1,0 +1,7 @@
+import pandas as pd
+from matplotlib import pyplot
+df = pd.read_csv("BeatlesSongsDataSet.csv")
+df1 = df[['Song','Year','Album','Popularity','Duration','Writer']]
+df = df1.groupby('Album')['Popularity'].mean()
+pyplot.plot(df)
+pyplot.show()
