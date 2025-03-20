@@ -1,0 +1,24 @@
+#Thermostat
+import random as random
+for i in range(100):
+    def target():
+        targettemp =random.randint(1,30)
+        return targettemp
+    def actualtemp():
+        actualtemperature=random.randint(1,30)
+        return actualtemperature
+    def thermostatModel (actual, target):
+       if actual < target:
+           return 1
+       else:
+           return 0
+    actualtemperature = actualtemp()
+#     targettemp= int(input('Enter your target temperature: '))
+    targettemperature = target()
+    tempOnorOff = thermostatModel(actualtemperature,targettemperature)
+    print(tempOnorOff)
+    if tempOnorOff == 0:
+        print ('Powering off...')
+    else:
+            print ('Powering on!')
+    print (actualtemperature)
