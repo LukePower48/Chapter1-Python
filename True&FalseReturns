@@ -1,0 +1,11 @@
+def emailval(e):
+    if e.count('@')==1 and len(email)>=8 and email.count('.')>=1:
+        return True
+    else:
+        return False
+email=input('Enter email: ')
+if emailval(email):
+    print('Valid')
+else:
+    print ('Invalid')
+emailval(email)
